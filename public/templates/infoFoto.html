@@ -1,0 +1,345 @@
+<div class="iconV" id="imgSolar">
+</div>
+<transition name="slide-fade">
+    <div class="infoFoto ventana">
+        <div class="divTitle">
+            <div class="title">
+                GENERACIÓN ELÉCTRICA FOTOVOLTAICA
+            </div>
+        </div>
+        <div>
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="#formFoto">
+                        FORMULARIO
+                    </a>
+                </li>
+                <li>
+                    <a href="#resFoto">
+                        RESULTADOS
+                    </a>
+                </li>
+                <!--  <li>
+                    <a href="#desfoto">
+                        DESCARGAS
+                    </a>
+                </li>-->
+            </ul>
+        </div>
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="formFoto" style="overflow-y: scroll;">
+                <div class="divHelp">
+                    <a href="/files/Tutorial_Uso_GENERACION_ELECTRICA_FOTOVOLTAICA.pdf" target="_blank">
+                        <img src="css/images/icons/ayuda20x20.svg" style="height: 25px; width: 25px;"/>
+                    </a>
+                </div>
+                <div style="padding:5px;">
+                    <div class="title_red space">
+                        INSTALACIÓN DE RED ELÉCTRICA EN EL HOGAR
+                    </div>
+                    <div class="labelData">
+                        Conexión a la Red
+                    </div>
+                    <div class="inputradio">
+                        <input checked="" name="rRed" onclick="disabledMeses(1)" type="radio"/>
+                    </div>
+                    <div class="labelData3">
+                        Si
+                    </div>
+                    <div class="inputradio">
+                        <input name="rRed" onclick="disabledMeses(0)" type="radio"/>
+                    </div>
+                    <div class="labelData3">
+                        No
+                    </div>
+                    <div class="lineablanca">
+                    </div>
+                    <div class="title_red space">
+                        CONSUMO MENSUAL ELÉCTRICO (kWh)
+                    </div>
+                    <div class="labelMes">
+                        ENE
+                    </div>
+                    <div class="inputMes">
+                        <input class="iMes" id="txtENE" type="number" value="168"/>
+                    </div>
+                    <div class="labelMes">
+                        FEB
+                    </div>
+                    <div class="inputMes">
+                        <input class="iMes" id="txtFEB" type="number" value="139"/>
+                    </div>
+                    <div class="labelMes">
+                        MAR
+                    </div>
+                    <div class="inputMes">
+                        <input class="iMes" id="txtMAR" type="number" value="228"/>
+                    </div>
+                    <div class="labelMes">
+                        ABR
+                    </div>
+                    <div class="inputMes">
+                        <input class="iMes" id="txtABR" type="number" value="148"/>
+                    </div>
+                   <div class="lineablanca">
+                    </div>
+                    <div class="labelMes">
+                        MAY
+                    </div>
+                    <div class="inputMes">
+                        <input class="iMes" id="txtMAY" type="number" value="217"/>
+                    </div>
+                    <div class="labelMes">
+                        JUN
+                    </div>
+                    <div class="inputMes">
+                        <input class="iMes" id="txtJUN" type="number" value="331"/>
+                    </div>
+                    <div class="labelMes">
+                        JUL
+                    </div>
+                    <div class="inputMes">
+                        <input class="iMes" id="txtJUL" type="number" value="250"/>
+                    </div>
+                    <div class="labelMes">
+                        AGO
+                    </div>
+                    <div class="inputMes">
+                        <input class="iMes" id="txtAGO" type="number" value="228"/>
+                    </div>
+                   <div class="lineablanca">
+                    </div>
+                    <div class="labelMes">
+                        SEP
+                    </div>
+                    <div class="inputMes">
+                        <input class="iMes" id="txtSEP" type="number" value="197"/>
+                    </div>
+                    <div class="labelMes">
+                        OCT
+                    </div>
+                    <div class="inputMes">
+                        <input class="iMes" id="txtOCT" type="number" value="174"/>
+                    </div>
+                    <div class="labelMes">
+                        NOV
+                    </div>
+                    <div class="inputMes">
+                        <input class="iMes" id="txtNOV" type="number" value="169"/>
+                    </div>
+                    <div class="labelMes">
+                        DIC
+                    </div>
+                    <div class="inputMes">
+                        <input class="iMes" id="txtDIC" type="number" value="142"/>
+                    </div>
+                    <div class="lineablanca">
+                    </div>
+                    <div class="title_red space">
+                        CARACTERÍSTICAS DE LA INSTALACIÓN
+                    </div>
+                    <div class="labelData">
+                        Capacidad a instalar
+                    </div>
+                    <div class="inputMes">
+                        <input id="txtCap" type="number" value="5"/>
+                    </div>
+                    <div class="labelMedidas" >
+                        kW
+                    </div>
+                  <div class="lineablanca">
+                    </div>
+                    <div class="labelData">
+                        Tipo de Montaje
+                    </div>
+                    <div class="inputradio">
+                        <input checked="" name="rModelo" type="radio" value="3"/>
+                    </div>
+                    <div class="imageForm">
+                        <img src="images/fvarriba.svg"/>
+                    </div>
+                    <div class="inputradio">
+                        <input name="rModelo" type="radio" value="4"/>
+                    </div>
+                    <div class="imageForm">
+                        <img src="images/fvcostado.svg"/>
+                    </div>
+                 <div class="lineablanca">
+                    </div>
+                    <div class="labelData labelData2">
+                        Inclinación 
+                    </div>
+                    <div class="inputMes">
+                        <input id="txtInclinacion" type="number" value="30"/>
+                    </div>
+                    <div class="labelMedidas">
+                        º 
+                    </div>
+                     <div class="lineablanca">
+                    </div>
+                    <div class="labelData labelData2">
+                        Eficiencia del Inversor 
+                    </div>
+                    <div class="inputMes">
+                        <input id="txtInv" max="100" min="1" type="number" value="98"/>
+                    </div>
+                    <div class="labelMedidas">
+                        %
+                    </div>
+                    <div class="lineablanca">
+                    </div>
+                    <div class="labelData labelData2">
+                        Factor de pérdidas 
+                    </div>
+                    <div class="inputMes">
+                        <input id="txtFactor" max="100" min="1" type="number" value="20"/>
+                    </div>
+                    <div class="labelMedidas">
+                        %
+                    </div>
+                     <div class="lineablanca">
+                    </div>
+                    <div class="labelData labelData2">
+                        ¿Desea descargar reporte?
+                    </div>
+                    <div class="inputradio">
+                        <input name="rReporte" id="rRSi" class="rReporte" onclick="hasReporte(1,this)" type="radio"/>
+                    </div>
+                    <div class="labelData3">
+                        Si
+                    </div>
+                    <div class="inputradio">
+                        <input name="rReporte" id="rRNo"  class="rReporte" onclick="hasReporte(0,this)" checked="checked" type="radio"/>
+                    </div>
+                    <div class="labelData3">
+                        No
+                    </div>
+                    <div class="lineablanca">
+                    </div>
+                    <div class="labelData4 tipUser" style="display:none">
+                        Tipo de usuario
+                    </div>
+                    <div class="inputSelect tipUser" style="display:none">
+                        <select id="ddlTipoUsuario">
+                            <option value="1">
+                                T1-R1
+                            </option>
+                            <option value="2">
+                                T1-R2
+                            </option>
+                            <option value="3">
+                                T1-G1 
+                            </option>
+                            <option value="4">
+                                T1-G2 
+                            </option>
+                            <option value="5">
+                                T1-AP 
+                            </option>
+                            <option value="6">
+                                T2-Ba 
+                            </option>
+                            <option value="7">
+                                T3-Ba 
+                            </option>
+                            <option value="8">
+                                T3-Bm 
+                            </option>
+                            <option value="9">
+                                T3-Me 
+                            </option>
+                            <option value="10">
+                                T3-Mm 
+                            </option>
+                            <option value="11">
+                                T3-Al 
+                            </option>
+                            <option value="12">
+                                T4-Ba 
+                            </option>
+                            <option value="13">
+                                T5-Ba 
+                            </option>
+                            <option value="14">
+                                T5-Bm 
+                            </option>
+                            <option value="15">
+                                T6-Me 
+                            </option>
+                            <option value="16">
+                                T6-Mm 
+                            </option>
+                            <option value="17">
+                                T7-Ba 
+                            </option>
+                            <option value="18">
+                                T8 
+                            </option>
+                            <option value="19">
+                                T8-m 
+                            </option>
+                        </select>
+                    </div>
+                     <div class="lineablanca">
+                    </div>
+                    <div class="divButton">
+                        <input class="button" id="btnCalcular" type="button" value="CALCULAR"/>
+                    </div>
+
+                </div>
+            </div>
+            <div class="tab-pane fade" id="resFoto">
+              <div id="divLoading" class="spinner" style="display:none"></div>
+              <div id="divResFotoAll">
+                <div class="title_red">
+                    <label id="titGrafFoto">
+                        GRAFICO DE CONSUMO Y GENERACIÓN ELÉCTRICA
+                    </label>
+                </div>
+                <div class="title_link link_report" id="divLinkReporte">
+                </div>
+                <div style="clear: both;">
+                </div>
+                <div id="contentResult">
+                    <div id="divgrafFoto">
+                        <canvas height="158" id="grafFoto" style="width: 316px; height: 158px;" width="316">
+                        </canvas>
+                    </div>
+                    <div id="divTableDatos">
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- <div class="tab-pane fade" id="desfoto">
+                <br/>
+                <div class="title_red">
+                    <label id="titDescFoto">
+                    </label>
+                </div>
+                <table class="table-resumen">
+                    <thead>
+                        <tr>
+                            <th>
+                                Formato
+                            </th>
+                            <th>
+                                Descarga
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                pdf
+                            </td>
+                            <td>
+                                <div id="link1Foto">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>-->
+        </div>
+    </div>
+</transition>

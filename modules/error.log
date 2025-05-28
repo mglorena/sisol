@@ -1,0 +1,19 @@
+
+The file 1.pdf can't be found, aborts
+
+The error occurred when executing:
+ at /usr/local/share/perl/5.22.1/PDF/Reuse.pm line 1235.
+	PDF::Reuse::findGet("1.pdf", "") called at blib/lib/PDF/Reuse.pm (autosplit into blib/lib/auto/PDF/Reuse/analysera.al) line 5993
+	PDF::Reuse::analysera("1.pdf", 1, "") called at blib/lib/PDF/Reuse.pm (autosplit into blib/lib/auto/PDF/Reuse/prDoc.al) line 3632
+	PDF::Reuse::prDoc("1.pdf") called at Reporte.pm line 480
+	Reporte::creaReporte("-68.085,-24.99,1400,5,30,3,95,0.1,184.53,162.83,153.86,122.05"...) called at pruebaReporte.pl line 18
+
+Situation when the error occurred
+
+   Bytes written to the current pdf-file,    pos    = 15
+   Object processed, not necessarily written objNr  = 3
+   Current pdf-file,                         utfil  = reporte.pdf
+   File logging the run,                     runfil = undef
+   Local time                                       = Wed Aug  8 10:26:23 2018
+
+

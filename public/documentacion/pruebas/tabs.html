@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://unpkg.com/vue"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.4/vue.min.js"></script>
+        <style>
+            
+            .first{
+                 background-image: url("http://localhost/sayiri/css/images/iconradiacion.png");
+                
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+      <script>
+
+            new Vue({
+                el: "#app",
+            })
+
+        </script>     
+      <div id="app">
+ <vue-tabs active-tab-color="#9b59b6" 
+           active-text-color="white"
+ >
+    <v-tab title="First tab" icon="ti-user">
+      First tab content
+    </v-tab>
+
+    <v-tab title="Second tab" icon="ti-settings">
+      Second tab content
+    </v-tab>
+
+    <v-tab title="Third tab" icon="ti-check">
+      Third tab content
+    </v-tab>
+</vue-tabs>
+
+</div>
+      
+    </body>
+</html>

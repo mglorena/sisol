@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #app {
+                background: black;
+                transition: 1s;
+            }
+
+            #app.lightTheme {
+                background: white;
+            }
+
+
+        </style>
+
+    </head>
+    <body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.4/vue.min.js"></script>
+        <div id="app" :class="{ lightTheme: isActive }">
+             <button @click="toggleTheme">Change theme</button>
+        </div>
+        <div>TODO write content</div>
+        <script>
+
+            new Vue({
+                el: '#app',
+                data: {
+                    isActive: false
+                },
+                methods: {
+                    toggleTheme: function () {
+                        this.isActive = !this.isActive;
+                    }
+                }
+            });
+
+        </script>
+    </body>
+</html>

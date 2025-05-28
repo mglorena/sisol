@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            /* Always set the map height explicitly to define the size of the div
+             * element that contains the map. */
+            #map {
+                height: 100%;
+            }
+            /* Optional: Makes the sample page fill the window. */
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div>TODO write content</div> <div id="map"></div>
+
+        <script>
+            function initMap() {
+                /* var map = new google.maps.Map(document.getElementById('map'), {
+                 zoom: 18,
+                 center: {lat: - 65.285, lng: - 25.09}
+                 });*/
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 7,
+                    center: {lat: -24.3260336, lng: -66.2248039}
+                });
+                var wmsLayer =
+                        new google.maps.ImageMapType({
+                            getTileUrl: function (coord, zoom) {
+
+                                var s = Math.pow(2, zoom);
+                                var twidth = 768;
+                                var theight = 540;
+
+                                //define boundingbox
+                                var gBl = map.getProjection().fromPointToLatLng(
+                                        new google.maps.Point(coord.x * twidth / s, (coord.y + 1) * theight / s)); //zuidwest coördinaat
+                                var gTr = map.getProjection().fromPointToLatLng(
+                                        new google.maps.Point((coord.x + 1) * twidth / s, coord.y * theight / s)); //noordoost coördinaat
+
+                                var bbox = gBl.lng() + "," + gBl.lat() + "," + gTr.lng() + "," + gTr.lat();
+
+                                //basics WMS URL
+                                var url = "http://localhost:8080/geoserver/limites/wms?";
+
+                                //url = http://localhost:8080/geoserver/limites/wms?service=WMS&version=1.1.0&request=GetMap&layers=limites:SaltaLimite&styles=&bbox=-68.5772409999999,-26.398267999999973,-62.32977699999998,-22.00258999999994&width=768&height=540&srs=EPSG:4326&format=image%2Fpng
+
+                                url += "&service=WMS";
+                                url += "&version=1.1.0";
+                                url += "&request=GetMap";
+                                url += "&layers=limites:SaltaLimite";
+                                url += "&styles=";
+                                url += "&bbox=" + bbox;
+                                // url += "&format=image/png";
+                                //url += "&TRANSPARENT=TRUE";
+                                //url += "&srs=EPSG:4326";
+
+                                url += "&width=768";
+                                url += "&height=540";
+                                url += "&srs=EPSG:4326";
+                                url += "&format=image/png";
+                                // url += "&customheader=" + new Date().getTime();
+                                // url += "&viewparams=kind:bike;groupid:1";
+                                // url += "&tiled=true";
+
+                                return url;
+                            },
+
+                            tileSize: new google.maps.Size(768, 540),
+                            opacity: 0.85,
+                            isPng: true
+                        }
+                        );
+                map.overlayMapTypes.push(wmsLayer);
+                map.setMapTypeId('hybrid');
+            }
+
+        </script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHeKwmzy0h1BsBZfLRuDKWuwQEuvoAAIc&callback=initMap">
+        </script>
+    </body>
+</html>

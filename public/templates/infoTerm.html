@@ -1,0 +1,551 @@
+<div class="iconV" id="imgTerm">
+</div>
+<transition name="slide-fade">
+    <div class="infoTerm ventana">
+        <div class="divTitle">
+            <div class="title">
+                GENERACIÓN TÉRMICA
+            </div>
+        </div>
+        <div>
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="#formTerm">
+                        FORMULARIO
+                    </a>
+                </li>
+                <li>
+                    <a href="#resTerm">
+                        RESULTADOS
+                    </a>
+                </li>
+                <!--  <li>
+                    <a href="#desTerm">
+                        DESCARGAS
+                    </a>
+                </li>-->
+            </ul>
+        </div>
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="formTerm">
+                <div class="divHelp">
+                    <a href="files/Tutorial_Uso_GENERACION_ELECTRICA_TERMICA.pdf" target="_blank">
+                        <img src="css/images/icons/ayuda20x20.svg" style="height: 25px; width: 25px;"/>
+                    </a>
+                </div>
+                <div style="padding:5px;">
+                    <div class="title_red space">
+                        SISTEMA UTILIZADO PARA EL AGUA CALIENTE SANITARIA
+                    </div>
+                    <div class="inputradio">
+                        <input checked="" name="rGas" onclick="disabledBloque('dGasNat','1')" type="radio" value="1"/>
+                    </div>
+                    <div class="labelTipo">
+                        Gas Natural
+                    </div>
+                    <div class="inputradio">
+                        <input name="rGas" onclick="disabledBloque('dGasEnv','2')" type="radio" value="2"/>
+                    </div>
+                    <div class="labelTipo">
+                        Gas Envasado
+                    </div>
+                    <div class="inputradio">
+                        <input name="rGas" onclick="disabledBloque('dElec','3')" type="radio" value="3"/>
+                    </div>
+                    <div class="labelTipo">
+                        Electricidad
+                    </div>
+                    <div class="inputradio">
+                        <input name="rGas" onclick="disabledBloque('dSin','4')" type="radio" value="4"/>
+                    </div>
+                    <div class="labelTipo">
+                        Sin instalación
+                    </div>
+                     <div class="lineablanca">
+                    </div>
+                    <div class="dBloque" id="dGasNat">
+                        <div class="title_red space">
+                            CONSUMO MENSUAL  (m <sup>
+                                3
+                            </sup>)
+                        </div>
+                        <div class="labelMes2">
+                            ENE
+                        </div>
+                        <div style="padding:2px;float:left;width:5px">
+                        </div>
+                        <div class="labelMes2">
+                            FEB
+                        </div>
+                        <div class="inputMes">
+                            <input class="iMes" id="txtEneFeb" type="number" value="168"/>
+                        </div>
+                        <div class="labelMes2">
+                            MAR
+                        </div>
+                        <div style="padding:2px;float:left;width:5px">
+                        </div>
+                        <div class="labelMes2">
+                            ABR
+                        </div>
+                        <div class="inputMes">
+                            <input class="iMes" id="txtMarAbr" type="number" value="139"/>
+                        </div>
+                        <div class="labelMes2">
+                            MAY
+                        </div>
+                        <div style="padding:2px;float:left;width:5px">
+                        </div>
+                        <div class="labelMes2">
+                            JUN
+                        </div>
+                        <div class="inputMes">
+                            <input class="iMes" id="txtMayJun" type="number" value="228"/>
+                        </div>
+                        <div style="clear:both;padding:3px;">
+                        </div>
+                        <div class="labelMes2">
+                            JUL
+                        </div>
+                        <div style="padding:2px;float:left;width:5px">
+                        </div>
+                        <div class="labelMes2">
+                            AGO
+                        </div>
+                        <div class="inputMes">
+                            <input class="iMes" id="txtJulAgo" type="number" value="217"/>
+                        </div>
+                        <div class="labelMes2">
+                            SEP
+                        </div>
+                        <div style="padding:2px;float:left;width:5px">
+                        </div>
+                        <div class="labelMes2">
+                            OCT
+                        </div>
+                        <div class="inputMes">
+                            <input class="iMes" id="txtSepOct" type="number" value="331"/>
+                        </div>
+                        <div class="labelMes2">
+                            NOV
+                        </div>
+                        <div style="padding:2px;float:left;width:5px">
+                        </div>
+                        <div class="labelMes2">
+                            DIC
+                        </div>
+                        <div class="inputMes">
+                            <input class="iMes" id="txtNovDic" type="number" value="250"/>
+                        </div>
+                        <div class="lineablanca">
+                    </div>
+                    </div>
+                    <div class="dBloque" id="dGasEnv" style="display: none;">
+                        <div class="title_red space">
+                            CONSUMO MENSUAL  (kg
+                            )
+                        </div>
+                        <div class="labelAskTerm">
+                            ¿Cuantos  kilos contiene su garrafa/cilindro?
+                        </div>
+                        <div class="inputMes">
+                            <input id="txtGarrafa" type="number" value="10"/>
+                        </div>
+                        <div  class="labelMedidas">
+                            kg.
+                        </div>
+                        <div class="lineablanca">
+                    </div>
+                        <div class="labelAskTerm">
+                            ¿Cada cuantos meses compra su garrafa/cilindro?
+                        </div>
+                        <div class="inputMes">
+                            <input id="txtGaMeses" type="number" value="2"/>
+                        </div>
+                        <div  class="labelMedidas">
+                            Meses
+                        </div>
+                         <div class="lineablanca">
+                    </div>
+                    </div>
+                    <div class="dBloque" id="dElec" style="display: none;">
+                        <div class="title_red space">
+                            CONSUMO MENSUAL ELÉCTRICO (kWh)
+                        </div>
+                        <div class="labelMes">
+                            ENE
+                        </div>
+                        <div class="inputMes">
+                            <input class="iMes" id="txtENEt" type="number" value="168"/>
+                        </div>
+                        <div class="labelMes">
+                            FEB
+                        </div>
+                        <div class="inputMes">
+                            <input class="iMes" id="txtFEBt" type="number" value="139"/>
+                        </div>
+                        <div class="labelMes">
+                            MAR
+                        </div>
+                        <div class="inputMes">
+                            <input class="iMes" id="txtMARt" type="number" value="228"/>
+                        </div>
+                        <div class="labelMes">
+                            ABR
+                        </div>
+                        <div class="inputMes">
+                            <input class="iMes" id="txtABRt" type="number" value="148"/>
+                        </div>
+                        <div class="lineablanca">
+                    </div>
+                        <div class="labelMes">
+                            MAY
+                        </div>
+                        <div class="inputMes">
+                            <input class="iMes" id="txtMAYt" type="number" value="217"/>
+                        </div>
+                        <div class="labelMes">
+                            JUN
+                        </div>
+                        <div class="inputMes">
+                            <input class="iMes" id="txtJUNt" type="number" value="331"/>
+                        </div>
+                        <div class="labelMes">
+                            JUL
+                        </div>
+                        <div class="inputMes">
+                            <input class="iMes" id="txtJULt" type="number" value="250"/>
+                        </div>
+                        <div class="labelMes">
+                            AGO
+                        </div>
+                        <div class="inputMes">
+                            <input class="iMes" id="txtAGOt" type="number" value="228"/>
+                        </div>
+                        <div class="lineablanca">
+                    </div>
+                        <div class="labelMes">
+                            SEP
+                        </div>
+                        <div class="inputMes">
+                            <input class="iMes" id="txtSEPt" type="number" value="197"/>
+                        </div>
+                        <div class="labelMes">
+                            OCT
+                        </div>
+                        <div class="inputMes">
+                            <input class="iMes" id="txtOCTt" type="number" value="174"/>
+                        </div>
+                        <div class="labelMes">
+                            NOV
+                        </div>
+                        <div class="inputMes">
+                            <input class="iMes" id="txtNOVt" type="number" value="169"/>
+                        </div>
+                        <div class="labelMes">
+                            DIC
+                        </div>
+                        <div class="inputMes">
+                            <input class="iMes" id="txtDICt" type="number" value="142"/>
+                        </div>
+                        <div class="lineablanca">
+                    </div>
+                         <div class="lineablanca">
+                    </div>
+                    </div>
+                    <div class="dBloque" id="dSin" style="display: none;">
+                    </div>
+                    <div class="title_red space">
+                        CARACTERÌSTICAS DE LA INSTALACIÓN
+                    </div>
+                    <div class="labelAskTerm">
+                        Cantidad de personas que viven en el hogar
+                    </div>
+                    <div class="inputMes">
+                        <input id="txtFlia" type="number" value="1" onblur="ChangeLitros(this);" />
+                    </div>
+                     <div class="lineablanca">
+                    </div>
+                    <div class="labelAskTerm" style="font-style: italic;color:#565555">Volumen estimado de tanque: <span id="divLitros">90 </span> litros</div>
+                   <div class="lineablanca">
+                    </div>
+                    <div class="labelData">
+                        Tipo de Colector
+                    </div>
+                    <div class="inputradio">
+                        <input checked="" name="rColector" type="radio" value="1"/>
+                    </div>
+                    <div class="imageForm2">
+                        <img src="images/calefonplano.svg"/>
+                    </div>
+                    <div class="labelAskTerm">
+                        Plano
+                    </div>
+                  
+                    <div class="inputradio">
+                        <input name="rColector" type="radio" value="2"/>
+                    </div>
+                    <div class="imageForm2">
+                        <img src="images/calefontubo.svg"/>
+                    </div>
+                    <div class="labelAskTerm">
+                        Tubos de vacio                          
+                    </div>
+                     <div class="lineablanca">
+                    </div>
+                    <div class="labelData labelData2">
+                        ¿Desea descargar reporte?
+                    </div>
+                    <div class="inputradio">
+                        <input class="rReporteT" id="rRTSi" name="rReporteT" onclick="hasReporteT(1,this)" type="radio"/>
+                    </div>
+                    <div class="labelData3">
+                        Si
+                    </div>
+                    <div class="inputradio">
+                        <input checked="checked" class="rReporteT" id="rRTNo" name="rReporteT" onclick="hasReporteT(0,this)" type="radio"/>
+                    </div>
+                    <div class="labelData3">
+                        No
+                    </div>
+                    <div class="reporteF" style="display:none;">
+                        <div class="labelData labelData5">
+                            ¿Desea descargar el cálculo técnico-financiero utilizando la Ley de un Sol en casa?
+                        </div>
+                        <div class="inputradio">
+                            <input class="rRepFinan" id="rReSi" name="rRepFinan" onclick="hasCalFinan(1,this)" type="radio"/>
+                        </div>
+                        <div class="labelData3">
+                            Si
+                        </div>
+                        <div class="inputradio">
+                            <input checked="checked" class="rRepFinan" id="rReNo" name="rRepFinan" onclick="hasCalFinan(0,this)" type="radio"/>
+                        </div>
+                        <div class="labelData3">
+                            No
+                        </div>
+                        <div class="repFinan" style="display:none">
+                            <div style="clear:both;padding:2px">
+                            </div>
+                            <div class="labelAskTerm">
+                                Costo del equipo solar-térmico
+                            </div>
+                            <div class="inputMes">
+                                <input id="txtCostoES" type="number" value="2300"/>
+                            </div>
+                            <div class="labelData" style="float:left;">
+                                $ Pesos
+                            </div>
+                            <div class="lineablanca">
+                    </div>
+                            <div class="labelAskTerm">
+                                Costo de instalación
+                            </div>
+                            <div class="inputMes">
+                                <input id="txtCostoIns" type="number" value="15000"/>
+                            </div>
+                            <div class="labelData" style="float:left;">
+                                $ Pesos
+                            </div>
+                            <div class="lineablanca">
+                    </div>
+                            <div class="repFGasNat" style="display:none">
+                                <div class="labelData4">
+                                    Tipo de usuario
+                                </div>
+                                <div class="inputSelectt">
+                                    <select id="ddlTipoUsuario">
+                                        <option value="1">
+                                            R1
+                                        </option>
+                                        <option value="1">
+                                            R2 1°
+                                        </option>
+                                        <option value="1">
+                                            R2 2°
+                                        </option>
+                                        <option value="1">
+                                            R2 3°
+                                        </option>
+                                        <option value="1">
+                                            R3 1°
+                                        </option>
+                                        <option value="1">
+                                            R3 2°
+                                        </option>
+                                        <option value="1">
+                                            R3 3°
+                                        </option>
+                                        <option value="1">
+                                            R3 4°
+                                        </option>
+                                        <option value="1">
+                                            P1 - P2
+                                        </option>
+                                        <option value="1">
+                                            P3
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="lineablanca">
+                    </div>
+                                <div class="labelData labelData5">
+                                    ¿Su instalación se realizará en la Puna (San Antonio de los Cobres)?
+                                </div>
+                                <div class="inputradio">
+                                    <input class="rRepSan" id="rPSanSi" name="rRepSan" type="radio"/>
+                                </div>
+                                <div class="labelData3">
+                                    Si
+                                </div>
+                                <div class="inputradio">
+                                    <input checked="checked" class="rRepSan" id="rPSanNo" name="rRepSan" type="radio"/>
+                                </div>
+                                <div class="labelData3">
+                                    No
+                                </div>
+                            </div>
+                            <div class="repFGasEnv" style="display:none">
+                                <div class="lineablanca">
+                    </div>
+                                <div class="labelAskTerm">
+                                    ¿Cuánto pago por su garrafa/cilindro?
+                                </div>
+                                <div class="inputMes">
+                                    <input id="txtFPrecioGarrafa" type="number" value="1"/>
+                                </div>
+                                <div class="labelData">
+                                    $ Pesos
+                                </div>
+                            </div>
+                            <div class="repFElectri" style="display:none">
+                                <div class="labelData4">
+                                    Tipo de usuario
+                                </div>
+                                <div class="inputSelect">
+                                    <select id="ddlTipoUsuarioT">
+                                        <option value="1">
+                                            T1-R1
+                                        </option>
+                                        <option value="2">
+                                            T1-R2
+                                        </option>
+                                        <option value="3">
+                                            T1-G1
+                                        </option>
+                                        <option value="3">
+                                            T1-G2
+                                        </option>
+                                        <option value="3">
+                                            T1-AP 
+                                        </option>
+                                        <option value="3">
+                                            T2-Ba 
+                                        </option>
+                                        <option value="3">
+                                            T3-Ba 
+                                        </option>
+                                        <option value="3">
+                                            T3-Bm 
+                                        </option>
+                                        <option value="3">
+                                            T3-Me 
+                                        </option>
+                                        <option value="3">
+                                            T3-Mm 
+                                        </option>
+                                        <option value="3">
+                                            T3-Al 
+                                        </option>
+                                        <option value="3">
+                                            T4-Ba 
+                                        </option>
+                                        <option value="3">
+                                            T5-Ba 
+                                        </option>
+                                        <option value="3">
+                                            T5-Bm 
+                                        </option>
+                                        <option value="3">
+                                            T6-Me 
+                                        </option>
+                                        <option value="3">
+                                            T6-Mm 
+                                        </option>
+                                        <option value="3">
+                                            T7-Ba 
+                                        </option>
+                                        <option value="3">
+                                            T8 
+                                        </option>
+                                        <option value="3">
+                                            T8-m 
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   <div class="lineablanca">
+                    </div>
+                    <div class="divButton">
+                        <input class="button" id="btnCalcularTerm" type="button" value="CALCULAR"/>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="resTerm">
+                <div class="spinner" id="divLoadingT" style="display:none">
+                </div>
+                <div id="divResTermAll">
+                    <div class="title_red">
+                        <label id="titGrafTerm">
+                            CONSUMO Y AHORRO
+                        </label>
+                    </div>
+                    <div class="title_link link_report" id="divLinkReporteT">
+                    </div>
+                    <div style="clear: both;">
+                    </div>
+                    <div id="contentResTerm">
+                        <div id="divgrafTerm">
+                            <canvas height="158" id="grafTerm" style="width: 316px; height: 158px;" width="316">
+                            </canvas>
+                        </div>
+                        <div id="divTableDatosTerm">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="tab-pane fade" id="desTerm">
+                <br/>
+                <div class="title_red">
+                    <label id="titDescTerm">
+                    </label>
+                </div>
+                <table class="table-resumen">
+                    <thead>
+                        <tr>
+                            <th>
+                                Formato
+                            </th>
+                            <th>
+                                Descarga
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                pdf
+                            </td>
+                            <td>
+                                <div id="link1Term">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>-->
+        </div>
+    </div>
+</transition>

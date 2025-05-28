@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue.js</title>
+          <script src="js/vue.min.js?v1.1"></script> 
+    <style>
+        .is-red{
+            background: red;
+        }
+        .is-blue{
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <h1 class="is-blue" :class="{ isLoading ? is-blue : is-red }">hello</h1>
+        <button @click="changeColor">toggle</button>
+    </div>
+    <script src="js/vue.js"></script>
+
+    <script>
+
+        new Vue({
+            el: '#root',
+            data:{
+                isLoading: true,
+            },
+            methods:{
+                changeColor(){
+                    this.isLoading = !this.isLoading;
+                }
+            }
+
+        })
+
+    </script>
+</body>
+</html>

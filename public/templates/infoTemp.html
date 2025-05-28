@@ -1,0 +1,102 @@
+<div id="imgTemp" class="iconV"></div>
+<transition name="slide-fade">
+    <div  class="infoTemp ventana" >
+        <div class="divTitle">
+            <div class="title">TEMPERATURA </div>
+        </div>
+        <div>
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#resTemp">DATOS</a></li>
+                <li><a href="#grafTemp">GR&Aacute;FICOS</a></li>
+                <li><a href="#desTemp">DESCARGAS</a></li>
+            </ul>
+        </div>
+        <div class="tab-content" >
+            <div id="resTemp" class="tab-pane fade in active">
+                 
+                 <div class="divHelp">
+            <a  href="files/Tutorial_Uso_TEMPERATURA.pdf" target="_blank">
+                <img src="css/images/icons/ayuda20x20.svg" style="height: 25px; width: 25px;"/>
+            </a>
+        </div>
+                <div id="tempInfo">
+                    <br/>
+                    <div class="title_red"><label>DATOS GEOGRÁFICOS</label></div>
+                    <table class='table-resumen'>
+                        <thead>
+                            <tr>
+                                 <th>LATITUD  <br><span>(grados decimales)</span> <br/> </th>          
+                                <th>LONGITUD <br><span>(grados decimales)</span> <br/> </th>    
+                                <th>ALTITUD <br><span> (m.s.n.m) </span> <br/></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td ><label id="varlatTemp"/>-24.91</td> 
+                                <td ><label id="varlongTemp"/>-65.39</td>
+                                <td ><label id="varaltTemp"/>1301</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="title_red"><label id="titleInfoTemp">TEMPERATURA MEDIA </label></div>
+                    <table class="table-resumen">
+                        <thead>
+                            <tr>
+                                <th>TEMPERATURA MEDIA <br><span> ( ° C grados Celsius) </span><br/></th>                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td ><label id="vargblTemp"/></td> 
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="title_link" >  
+                    <blockquote> <a href="files/AtlasClimaticoINTA.pdf" target="_blank">
+                            <img src="css/images/icons/libro.svg" style="height: 20px; width: 20px;padding-right: 5px;"/> Memoría Técnica y Metadatos. Bianchi A.R., Cravero S.A.C, 2010. Atlas climático digital de la Republica Argentina.
+                            
+                        </a></blockquote>
+                    </div>
+                </div>
+
+            </div>
+            <div id="grafTemp" class="tab-pane fade">
+                <br/>
+                <div class="title_red"><label id="titGrafTemp"/>TEMPERATURA MEDIA MENSUAL</div>
+ 
+               <div id="divgrafTemp">
+                        <canvas height="158" id="grafT" style="width: 316px; height: 158px;" width="316">
+                        </canvas>
+                    </div>
+            </div>
+            <div id="desTemp" class="tab-pane fade">
+                <br/>
+                <div class="title_red"><label id="titDescTemp"></label></div>
+                <table class="table-resumen">
+                    <thead>
+                        <tr>
+                            <th>Formato</th>
+                            <th>Descarga</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td >pdf</td>
+                            <td ><div id="link1Temp"></div></td>
+                        </tr>
+                        <tr>
+                            <td >png</td>
+                            <td ><div id="link2Temp"></div></td>
+                        </tr>
+                        <tr>
+                            <td >tif</td>
+                            <td ><div id="link3Temp"></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+</transition>

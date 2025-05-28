@@ -1,0 +1,127 @@
+@media (min-width: 1360px) and (max-width: 2000px) {
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+        font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+        font-size: 1vh;
+        color: #000;
+    }
+    .title {
+        font-size: 1.3vh;
+    }
+    #title_calendar {
+        padding-top: 5px;
+        line-height: 15px;
+        text-align: center;
+        font-size: 1vh;
+    }
+    .dMes {
+        float: left;
+        width: 21px;
+        height: 18px;
+        padding-top: 2px;
+        border: 1px solid #791522;
+        margin-left: 3px;
+        margin-right: 2px;
+        margin-bottom: 2px;
+        cursor: pointer;
+        font-size: 0.9vh;
+    }
+    .inputMes input, .inputSelect {
+        font-size: 1.4vh;
+    }
+    .labelMes2, .labelMes {
+        font-size: 1.2vh;
+        height: 20px;
+    }
+    .labelData, .labelData4 {
+        font-size: 1.5vh;
+        width: 200px;
+    }
+    .labelData3, .labelMedidas, .labelData4 {
+        font-size: 1.5vh;
+    }
+    .info {
+        font-size: 1.5vh;
+    }
+    div#infoText {
+        font-size: 1.4vh;
+    }
+    .labelLatLong {
+        font-size: 1.1vh;
+    }
+    .inputlatlong {
+        font-size: 1.1vh;
+    }
+    .button {
+        font-size: 1.5vh;
+    }
+    #tableData {
+        font-size: 1.2vh;
+        border: 1px solid red;
+        position: relative;
+        height: 50%;
+        z-index: 50;
+    }
+    #divTableDatos {
+        padding-left: 10px;
+        z-index: 100px;
+    }
+    #contentResult {
+        overflow-y: scroll;
+        height: calc(80vh - calc(5vh + 140px));
+        border: 0px solid black;
+    }
+    #contentResTerm {
+        overflow-y: scroll;
+        height: calc(80vh - calc(5vh + 140px));
+        border: 0px solid black;
+    }
+}
+@media (max-width: 1024px) {
+    #map {
+        height: 89%;
+    }
+    .toolbarCalendar {
+        left: 2vh;
+    }
+    .infoRad {
+        height: calc(80vh - calc(5vh + 18px));
+    }
+    .infoFoto {
+        height: calc(80vh - calc(5vh + 18px));
+    }
+    .inputMes input {
+        width: 36px;
+    }
+    .imgScala {
+        width: 180px;
+        height: 60px;
+    }
+}
+@media (min-width: 900px) {}
+@media (min-width: 600px) {}
+@media (min-width: 320px) and (max-width: 480px) {
+    .toolbarForms {
+        display: none;
+    }
+    #logoSisol {
+        float: left;
+        height: 25px;
+    }
+    #logoSecre {
+        float: right;
+        height: 25px;
+    }
+    .logo {
+        width: 130px;
+    }
+    #header {
+        height: 30px;
+    }
+    .toolbarPointer {
+        display: none;
+    }
+}

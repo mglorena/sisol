@@ -1,0 +1,249 @@
+<div class="iconV" id="imgRad">
+</div>
+<transition name="slide-fade">
+    <div class="infoRad ventana">
+        <div class="divTitle">
+            <div class="title">
+                RECURSO SOLAR
+            </div>
+        </div>
+        <div>
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="#resumen">
+                        DATOS
+                    </a>
+                </li>
+                <li>
+                    <a href="#grafico">
+                        GRÁFICOS
+                    </a>
+                </li>
+                <li>
+                    <a href="#descargas">
+                        DESCARGAS
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="resumen">
+                <div class="divHelp">
+                    <a href="files/Tutorial_Uso_RECURSO_SOLAR.pdf" target="_blank">
+                        <img src="css/images/icons/ayuda20x20.svg" style="height: 25px; width: 25px;"/>
+                    </a>
+                </div>
+                <div id="solarInfo">
+                    <br/>
+                    <div class="title_red">
+                        <label>
+                            DATOS GEOGRÁFICOS
+                        </label>
+                    </div>
+                    <table class="table-resumen">
+                        <thead>
+                            <tr>
+                                <th>
+                                    LATITUD
+                                    <br>
+                                        <span>
+                                            (grados decimales)
+                                        </span>
+                                        <br/>
+                                    </br>
+                                </th>
+                                <th>
+                                    LONGITUD
+                                    <br>
+                                        <span>
+                                            (grados decimales)
+                                        </span>
+                                        <br/>
+                                    </br>
+                                </th>
+                                <th>
+                                    ALTITUD
+                                    <br>
+                                        <span>
+                                            (m.s.n.m)
+                                        </span>
+                                        <br/>
+                                    </br>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label id="varlat">
+                                    </label>
+                                </td>
+                                <td>
+                                    <label id="varlong">
+                                    </label>
+                                </td>
+                                <td>
+                                    <label id="varalt">
+                                    </label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="title_red">
+                        <label id="titleInfoRad">
+                            RADIACIÓN SOLAR ANUAL
+                        </label>
+                    </div>
+                    <table class="table-resumen">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Global
+                                    <br>
+                                        Plano Horizontal
+                                    </br>
+                                    <span>
+                                        (kWh/m
+                                        <sup>
+                                            2
+                                        </sup>
+                                        )
+                                    </span>
+                                </th>
+                                <th>
+                                    Global 30º
+                                    <br>
+                                        Plano Inclinado
+                                    </br>
+                                    <span>
+                                        (kWh/m
+                                        <sup>
+                                            2
+                                        </sup>
+                                        )
+                                    </span>
+                                </th>
+                                <th>
+                                    Directa
+                                    <br>
+                                        Plano  Horizontal
+                                    </br>
+                                    <span>
+                                        (kWh/m
+                                        <sup>
+                                            2
+                                        </sup>
+                                        )
+                                    </span>
+                                </th>
+                                <th>
+                                    Difusa
+                                    <br>
+                                        Plano Horizontal
+                                    </br>
+                                    <span>
+                                        (kWh/m
+                                        <sup>
+                                            2
+                                        </sup>
+                                        )
+                                    </span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label id="vargbl">
+                                    </label>
+                                </td>
+                                 <td>
+                                    <label id="vargblin">
+                                    
+                                    </label>
+                                </td>
+                                <td>
+                                    <label id="vardiNo">
+                                    
+                                    </label>
+                                </td>
+                                <td>
+                                    <label id="vardiHo">
+                                    </label>
+                                </td>
+                               
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="title_link">
+                        <blockquote>
+                            <a href="files/InformeTecnicoRadiacion.pdf" target="_blank">
+                                <img src="css/images/icons/libro.svg" style="height: 20px; width: 20px;padding-right: 5px;"/>
+                                Memoria Técnica y Metadatos.
+                            </a>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="grafico">
+                <br/>
+                <div class="title_red">
+                    <label id="titGrafRad">
+                    </label>
+                </div>
+                <div id="divgrafRad">
+                    <canvas height="158" id="grafRad" style="width: 316px; height: 158px;" width="316">
+                    </canvas>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="descargas">
+                <br/>
+                <div class="title_red">
+                    <label id="titDescRad">
+                    </label>
+                </div>
+                <table class="table-resumen">
+                    <thead>
+                        <tr>
+                            <th>
+                                Formato
+                            </th>
+                            <th>
+                                Descarga
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                pdf
+                            </td>
+                            <td>
+                                <div id="link1">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                png
+                            </td>
+                            <td>
+                                <div id="link2">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                tif
+                            </td>
+                            <td>
+                                <div id="link3">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</transition>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Styled Map Types</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+
+  
+</head>
+<body>
+    <div id="app">
+      <chartjs-bar :datalabel="mylabel" :labels="mylabels" :data="mydata" :width="300" :height="500"></chartjs-bar>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>
+<script src="../node_modules/hchs-vue-charts/dist/vue-charts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.min.js"></script>
+<script type="text/javascript">
+  
+    Vue.use(VueCharts);
+    const app = new Vue({
+        el: '#app',
+        data:{
+            mylabel : 'TestDataLabel',
+            mylabels : ['enero', 'febrero', 'marzo', 'abril', 'mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'],
+            mydata : [100, 40, 60,40,30,10,200,30,50,10,22,13]
+        },
+    });
+</script>
+</html>

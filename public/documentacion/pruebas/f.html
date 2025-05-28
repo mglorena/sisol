@@ -1,0 +1,39 @@
+ <div id="graf">
+    <chartjs-bar :datalabel="mylabel" :labels="mylabels" :data="mydata" :width="550" :height="200" :bind="true"></chartjs-bar>
+  </div>
+  <script type="text/javascript">
+    Vue.use(VueCharts);
+    var graf = new Vue({
+      el: '#graf',
+      data:{
+        mylabel : 'TestDataLabel',
+        mylabels : ['enero', 'febrero', 'marzo', 'abril', 'mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'],
+        mydata : [100, 40, 60,40,30,10,5,30,50,10,22,13]
+      },    methods: {
+        updateChart() {
+          this.mylabels = ['enero1', 'febrero1', 'marzo', 'abril', 'mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre']
+        },
+        updateDataSet(newDataSet)
+        {
+          console.log(newDataSet);
+         /* this.datasets[0].label = 'Z';
+          this.datasets[0].backgroundColor = 'rgba(0, 86, 101, 0.5)';*/
+          this.mydata[0]= newDataSet['Enero']; 
+          console.log(this.mydata[0]);
+          this.mydata[1]= newDataSet['Febrero']; 
+          this.mydata[2]= newDataSet['Marzo']; 
+          this.mydata[3]= newDataSet['Abril']; 
+          this.mydata[4]= newDataSet['Mayo']; 
+          this.mydata[5]= newDataSet['Junio']; 
+          this.mydata[6]= newDataSet['Julio']; 
+          this.mydata[7]= newDataSet['Agosto']; 
+          this.mydata[8]= newDataSet['Septiembre']; 
+          this.mydata[9]= newDataSet['Octubre']; 
+          this.mydata[10]= newDataSet['Noviembre']; 
+          this.mydata[11]= newDataSet['Diciembre']; 
+            // this.datasets[0].borderColor = 'rgba(56, 186, 211, 0.5)';
+          }
+        }
+      });
+    
+    </script>

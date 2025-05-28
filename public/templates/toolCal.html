@@ -1,0 +1,75 @@
+<div class="toolbarCalendar">
+    <div class="toolCal" id="imgDiario">
+    </div>
+    <div class="toolCal" id="imgMensual">
+    </div>
+    <div class="toolCal" id="imgAnual">
+    </div>
+    <div style="clear: both;">
+        <label id="title_calendar">
+            RADIACION ANUAL
+        </label>
+    </div>
+    <div class="meses">
+        <div class="dMes" id="enero" onclick="changeMap(this)">
+            ENE
+        </div>
+        <div class="dMes" id="febrero" onclick="changeMap(this)">
+            FEB
+        </div>
+        <div class="dMes" id="marzo" onclick="changeMap(this)">
+            MAR
+        </div>
+        <div class="dMes" id="abril" onclick="changeMap(this)">
+            ABR
+        </div>
+        <div style="clear:both;">
+        </div>
+        <div class="dMes" id="mayo" onclick="changeMap(this)">
+            MAY
+        </div>
+        <div class="dMes" id="junio" onclick="changeMap(this)">
+            JUN
+        </div>
+        <div class="dMes" id="julio" onclick="changeMap(this)">
+            JUL
+        </div>
+        <div class="dMes" id="agosto" onclick="changeMap(this)">
+            AGO
+        </div>
+        <div style="clear:both;">
+        </div>
+        <div class="dMes" id="septiembre" onclick="changeMap(this)">
+            SEP
+        </div>
+        <div class="dMes" id="octubre" onclick="changeMap(this)">
+            OCT
+        </div>
+        <div class="dMes" id="noviembre" onclick="changeMap(this)">
+            NOV
+        </div>
+        <div class="dMes" id="diciembre" onclick="changeMap(this)">
+            DIC
+        </div>
+        <div style="clear:both;">
+        </div>
+    </div>
+</div>
+<div class="toolbarPointer">
+
+
+   <div class="labelLatLong">
+        LATITUD
+    </div>
+    <div class="inputlatlong">
+        <input id="txtLat" onblur="setNewLatLong()" onchange="setNewLatLong()" type="number"/>
+    </div>
+    <div style="clear:both;">
+    </div>
+    <div class="labelLatLong">
+        LONGITUD
+    </div>
+    <div class="inputlatlong">
+       <input id="txtLong" onblur="setNewLatLong()" onchange="setNewLatLong()" type="number"/>
+    </div>
+</div>
